@@ -1,0 +1,11 @@
+apiVersion: azure.upbound.io/v1beta1
+kind: ResourceGroup
+metadata:
+  name: example-rg
+spec:
+  forProvider:
+    location: "France Central"
+    tags:
+      provisioner: crossplane
+  providerConfigRef:
+    name: default
