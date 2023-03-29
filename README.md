@@ -81,7 +81,7 @@ $ kubectl apply -f provider.yaml
 ```bash
  $ kubectl get providers
    NAME                     INSTALLED   HEALTHY   PACKAGE                                          AGE
-upbound-provider-azure   True        True      xpkg.upbound.io/upbound/provider-azure:v0.16.0   30s
+   upbound-provider-azure   True        True      xpkg.upbound.io/upbound/provider-azure:v0.16.0   30s
 $ kubectl get deploy -n upbound-system
   crossplane-858644b564-qzzvr                  1/1     Running   8 (3m4s ago)     52m
   crossplane-rbac-manager-557ff7d969-xn8tq     1/1     Running   11 (5m58s ago)   52m
