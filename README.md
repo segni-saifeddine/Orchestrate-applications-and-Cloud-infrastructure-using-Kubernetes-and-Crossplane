@@ -98,7 +98,7 @@ Log in to the Azure command-line, and Create an Azure service principal
 $ az ad sp create-for-rbac \
   --sdk-auth \
   --role Owner \
-  --scopes /subscriptions/6d750179-05c8-4654-9e43-3b24ebb2eb22
+  --scopes /subscriptions/xxxxxxxxxxxxxxxxxxxxx
 ```
 
 > Save your Azure JSON output as azure-credentials.json.
