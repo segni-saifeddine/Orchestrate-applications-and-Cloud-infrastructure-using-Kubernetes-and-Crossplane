@@ -46,7 +46,7 @@ $ kubectl get deploy -n upbound-system
 ```
 * The Crossplane deployment starts with the crossplane-init container. The init container installs the Crossplane Custom Resource Definitions into the *kubernetes* cluster.
 
-After the init container finishes, the crossplane pod manages two *kubernetes* controllers.
+ After the init container finishes, the crossplane pod manages two *kubernetes* controllers.
 
 - The Package Manager controller installs the provider and configuration packages.
 - The Composition controller installs and manages the Crossplane Composite Resource Definitions, Compositions and Claims.
