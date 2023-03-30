@@ -175,3 +175,11 @@ One benefit of using *kubernetes* declarative APIs is that it takes care of the 
 ```bash
 $ Kubectl delete ResourceGroup example-rg
 ```
+## That’s all !
+That’s all for this lab, thanks for reading!
+For those who want to go longer, you will find here useful links :
+* https://www.crossplane.io/
+* https://marketplace.upbound.io/providers/upbound/provider-azure/v0.29.0/docs/configuration
+* https://blog.wescale.fr/infra-as-code-depuis-kubernetes-avec-crossplane
+* https://www.padok.fr/en/blog/kubernetes-infrastructure-crossplane
+
