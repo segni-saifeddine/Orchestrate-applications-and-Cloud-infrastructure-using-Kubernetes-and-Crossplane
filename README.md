@@ -1,4 +1,4 @@
-# Use K8s to build your cloud infrastructure
+# Use K8s to build and orchestrate  your applications and cloud infrastructure
 Your run your applications into  a *kubernetes* cluster and you need to build your cloud infrastructure , using the Iinfrastructure as a code is a good solution ( tools like Terraform , Ansible or
 some provider Iacc tools like Aws CloudFormation can be so helpful ) ,
 
@@ -7,16 +7,32 @@ But what if you have a toolsthat combines all of the above!  With Crossplane “
 
 [![Crossplane-K8s](doc-images/crossplane-k8s.PNG)](doc-images/crossplane-k8s.PNG)
 
+## Assumptions and Prerequisites
+. Basic hands-on experience with Kubernetes.
+. Up and Running Kubernetes Cluster (e.g GKE, AKS, EKS,..) v1.16 or newer
+. You have kubectl  installed in your local machine.
+. You have Helm installed ,version v3.2.0 or later
+
+## Objectives: what you will learn ?
+1. Introduction to the Crossplane Solution
+2. How to install Crossplane 
+3. How to Connect Crossplane to Microsoft Azure
+4. Create and manage cloud resources from Kubernetes with the Crossplane Azure provider's.
+## Before starting
+In this lab , i will use an aks cluster , To create an Azure AKS cluster, preferably you use an Infrastructure as Code tool like Terraform. Although cluster creation isn’t covered by this lab.
+- Connect to cluster using kubectl
+To configure kubectl to connect to your Kubernetes cluster, use the az aks get-credentials command. Following example gets credentials for the AKS cluster named myAKSCluster in the myResourceGroup:
+```bash
+$ az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
+```
+- To verify the connection to your cluster, run the kubectl get nodes command to return a list of the cluster nodes.
+- Now you have a fully-provisioned Kubernetes cluster running in Azure, and you’re ready to install Crossplane on it!
+
 ## What is Crossplane?
 Like it is defined by the Crossplane community:  Crossplane is an open source, CNCF project built on the foundation of *kubernetes* to orchestrate anything.
 Crossplane can be considered as a *kubernetes* add-on, which means that it makes use of custom resources to provide all of its functionality
 
-## Prerequisites
-
-. k8s cluster version v1.16.0 or later
-. kubectl
-. Helm version v3.2.0 or later
-### Install Crossplane
+## Install Crossplane and integrate it with Azure
 
 Crossplane installs into an existing *kubernetes* cluster(in my case I am using an Azure *kubernetes* cluster "aks" with 1.24.6 k8s version),
 creating the Crossplane pod, enabling the installation of Crossplane Provider resources.
@@ -137,7 +153,7 @@ $ kubectl apply -f ProviderConfig.yaml
 ```
 > This attaches the Azure credentials, saved as a *kubernetes* secret, as a secretRef .
 
-### Create a managed resource
+## Create a managed resource
 We will use Crossplane to  create an azure resource group and then deploy an Linux virtuel machine in this resource group
 
 - Create the azure resource group :
