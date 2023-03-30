@@ -1,4 +1,4 @@
-# Use K8s to build and orchestrate  your applications and cloud infrastructure
+# Use kubernetes to build and orchestrate  your applications and cloud infrastructure
 Your run your applications into  a *kubernetes* cluster and you need to build your cloud infrastructure , using the Iinfrastructure as a code is a good solution ( tools like Terraform , Ansible or
 some provider Iacc tools like Aws CloudFormation can be so helpful ) ,
 
