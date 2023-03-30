@@ -8,10 +8,10 @@ But what if you have a toolsthat combines all of the above!  With Crossplane “
 [![Crossplane-K8s](doc-images/crossplane-k8s.PNG)](doc-images/crossplane-k8s.PNG)
 
 ## Assumptions and Prerequisites
-. Basic hands-on experience with Kubernetes.
-. Up and Running Kubernetes Cluster (e.g GKE, AKS, EKS,..) v1.16 or newer
-. You have kubectl  installed in your local machine.
-. You have Helm installed ,version v3.2.0 or later
++ Basic hands-on experience with Kubernetes.
++ Up and Running Kubernetes Cluster (e.g GKE, AKS, EKS,..) v1.16 or newer
++ You have kubectl  installed in your local machine.
++ You have Helm installed ,version v3.2.0 or later
 
 ## Objectives: what you will learn ?
 1. Introduction to the Crossplane Solution
@@ -21,7 +21,7 @@ But what if you have a toolsthat combines all of the above!  With Crossplane “
 ## Before starting
 In this lab , i will use an aks cluster , To create an Azure AKS cluster, preferably you use an Infrastructure as Code tool like Terraform. Although cluster creation isn’t covered by this lab.
 - Connect to cluster using kubectl
-To configure kubectl to connect to your Kubernetes cluster, use the az aks get-credentials command. Following example gets credentials for the AKS cluster named myAKSCluster in the myResourceGroup:
+To connect to your Kubernetes cluster, use the az aks get-credentials command. Following example gets credentials for the AKS cluster named myAKSCluster in the myResourceGroup:
 ```bash
 $ az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
 ```
